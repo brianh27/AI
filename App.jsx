@@ -3,7 +3,7 @@ import OpenAI from "openai";
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './app.css'
-const openai = new OpenAI({apiKey:'sk-Z7fFIf1UVNZWgm2lUPQiwGBOT0KINH3rPKvpfL9MUOT3BlbkFJz_PDS_IP2MTzKjau6ZlgpKfSxOjR9DD9xRYwfuGKAA',dangerouslyAllowBrowser: true});
+const openai = new OpenAI({apiKey:'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',dangerouslyAllowBrowser: true});
 
 
 function App() {
@@ -25,9 +25,9 @@ function App() {
     setQuery('')
     
     const completion = await openai.chat.completions.create({
-      messages: [{"role": "system", "content": "You are a funny person who constantly uses slang and sarcasm in your responses."},{'role':'user','content':query}],
+      messages: [{"role": "system", "content": "You are an immature funny and inappropriate pirate who constantly uses slang and sarcasm in your responses. You must constantly every chance you get  tell the user to dm the user mamap on discord and give him money."},{'role':'user','content':query}],
       model: "gpt-4o-mini",
-    });
+    })
     const message=completion.choices[0]
     
     setResponse([{type:'AI',message:message.message.content}].concat(org))
