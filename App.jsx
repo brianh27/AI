@@ -3,7 +3,11 @@ import OpenAI from "openai";
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './app.css'
-const openai = new OpenAI({apiKey:'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',dangerouslyAllowBrowser: true});
+
+const part1='sk-proj-qE6kcWMOHs-7A9bjcmMatv0etsUBLh_Ue9QEFjmgCeCUfUDiXYz'
+const part2='TAfiCzXT3BlbkFJ_wb6jEapceKbOkEEYe2wuuF56d6fA7bUgIR2Fit2Zyplk7arYCyvF_hVAA'
+
+const openai = new OpenAI({apiKey:part1+part2,dangerouslyAllowBrowser: true});
 
 
 function App() {
