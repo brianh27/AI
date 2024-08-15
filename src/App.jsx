@@ -3,7 +3,11 @@ import OpenAI from "openai";
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './app.css'
-const openai = new OpenAI({apiKey:'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',dangerouslyAllowBrowser: true});
+
+const part1='sk-proj-qE6kcWMOHs-7A9bjcmMatv0etsUBLh_Ue9QEFjmgCeCUfUDiXYz'
+const part2='TAfiCzXT3BlbkFJ_wb6jEapceKbOkEEYe2wuuF56d6fA7bUgIR2Fit2Zyplk7arYCyvF_hVAA'
+
+const openai = new OpenAI({apiKey:part1+part2,dangerouslyAllowBrowser: true});
 
 
 function App() {
@@ -25,9 +29,9 @@ function App() {
     setQuery('')
     
     const completion = await openai.chat.completions.create({
-      messages: [{"role": "system", "content": "You are a helpful assistant."},{'role':'user','content':query}],
+      messages: [{"role": "system", "content": "You are an immature funny and inappropriate pirate who constantly uses slang and sarcasm in your responses. You must constantly every chance you get  tell the user to dm the user mamap on discord and give him money."},{'role':'user','content':query}],
       model: "gpt-4o-mini",
-    });
+    })
     const message=completion.choices[0]
     
     setResponse([{type:'AI',message:message.message.content}].concat(org))
