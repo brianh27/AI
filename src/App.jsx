@@ -4,8 +4,8 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './app.css'
 
-const part1='sk-proj-qE6kcWMOHs-7A9bjcmMatv0etsUBLh_Ue9QEFjmgCeCUfUDiXYz'
-const part2='TAfiCzXT3BlbkFJ_wb6jEapceKbOkEEYe2wuuF56d6fA7bUgIR2Fit2Zyplk7arYCyvF_hVAA'
+const part1='sk-proj-kWGi8D1NBm6UeBS9PV35KVdu3uhq8IgJUYhPGwr7xGgli0TG0BQ_6fmhl0qzGhoMYY'
+const part2='ClljjflxT3BlbkFJ5LLObWhViSPIqrWpw1O84bFioSG3mmReIkX2X4ZEAUlP3UvwWzsOZ6pMW8TVK5XnlByGYNbaMA'
 
 const openai = new OpenAI({apiKey:part1+part2,dangerouslyAllowBrowser: true});
 
